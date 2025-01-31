@@ -22,6 +22,14 @@ SubtractComplexNumber() {
     result.push_back(imaginary_1 - imaginary_2);
     return result;
 }
+template<typename T>
+std::vector<T> ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
+MultiplyComplexNumber(){
+    std::vector<T> result;
+    result.push_back(real_1 * real_2 - imaginary_1 * imaginary_2);
+    result.push_back(real_1 * imaginary_2 + real_2 * imaginary_1);
+    return result;
+    }
 
 // Explicit instantiation for required types
 template class ComplexNumber<double>;

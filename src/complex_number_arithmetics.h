@@ -33,6 +33,13 @@ public:
         result.push_back(imaginary_1 - imaginary_2);
         return result;
     }
+    std::vector<T> MultiplyComplexNumber(){
+        std::vector<T> result;
+        result.push_back(real_1 * real_2 - imaginary_1 * imaginary_2);
+        result.push_back(real_1 * imaginary_2 + real_2 * imaginary_1);
+        return result;
+    }
+    
 };
 
 #endif // COMPLEXNUMBER_H

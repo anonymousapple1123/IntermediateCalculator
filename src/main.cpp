@@ -51,10 +51,14 @@ int main() {
 
     if ((parsed_num1.size() == 2) && (parsed_num2.size() == 2)) {
         ComplexNumber<double> complex(parsed_num1[0], parsed_num1[1], parsed_num2[0], parsed_num2[1]);
-        int choice = 1;
+        int choice = 2;
         switch (choice) {
         case 1:
             result_vec = complex.AddComplexNumber();
+            std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
+            break;
+        case 2:
+            result_vec=complex.MultiplyComplexNumber();
             std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
             break;
         default:
