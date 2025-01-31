@@ -1,42 +1,28 @@
-#include <iostream>
-#include <type_traits>
-#include <vector>
-//#added  comments
-template<typename T, typename Enable = void>
-class ComplexNumber;
+#include "complex_number_arithmetics.h"
 
 template<typename T>
-class ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type> {
-	private:
-	T real_1;
-	T real_2;
-	T imaginary_1;
-	T imaginary_2;
-public:
-ComplexNumber(T real_1, T imaginary_1, T real_2,  T imaginary_2){
-	this->real_1=real_1;
-	this->real_2=real_2;
-	this->imaginary_1=imaginary_1;
-	this->imaginary_2=imaginary_2;
-	//std::cout<<"Constructor called successfully";
+ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
+ComplexNumber(T real_1, T imaginary_1, T real_2, T imaginary_2)
+    : real_1(real_1), imaginary_1(imaginary_1), real_2(real_2), imaginary_2(imaginary_2) {}
+
+template<typename T>
+std::vector<T> ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
+AddComplexNumber() {
+    std::vector<T> result;
+    result.push_back(real_1 + real_2);
+    result.push_back(imaginary_1 + imaginary_2);
+    return result;
 }
 
-std::vector<T> AddComplexNumber(){
-	std::vector<T> result;
-   // std::cout<<real_1+real_2<<" + i"<<imaginary_1+imaginary_2;
-	result.push_back(real_1+real_2);
-	result.push_back(imaginary_1+imaginary_2);
-	return result;
-}
-std::vector<T> SubtractComplexNumber(){
- 	//std::cout<<real_1-real_2<<" + i"<<imaginary_1-imaginary_2;
-	std::vector<T> result;
-	result.push_back(real_1-real_2);
-	result.push_back(imaginary_1-imaginary_2);	
-	return result;
+template<typename T>
+std::vector<T> ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
+SubtractComplexNumber() {
+    std::vector<T> result;
+    result.push_back(real_1 - real_2);
+    result.push_back(imaginary_1 - imaginary_2);
+    return result;
 }
 
-
-};
-
-
+// Explicit instantiation for required types
+template class ComplexNumber<double>;
+template class ComplexNumber<float>;
