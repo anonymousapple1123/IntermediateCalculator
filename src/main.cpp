@@ -29,7 +29,10 @@ inline std::vector<double> parse_complex(const std::string& complex_str) {
         return {};
     }
 }
-
+void displayChoices(){
+    
+    return;
+}
 int main() {
     std::vector<double> result_vec;
     std::string number_1, number_2;
