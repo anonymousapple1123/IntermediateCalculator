@@ -1,34 +1,47 @@
 #include <iostream>
+#include <sstream>
+#include <algorithm>
 #include <cstdio>
 #include <string>
 #include <vector>
 #include "complex_number_arithmetics.h"
 
-inline std::vector<double> parse_complex(const std::string& complex_str) {
-    std::string command = "complex_parser.exe \"" + complex_str + "\"";
-    FILE* pipe = popen(command.c_str(), "r");
-    if (!pipe) {
-        std::cerr << "Failed to open pipe to executable." << std::endl;
-        return {};
-    }
-    char buffer[128];
-    std::string result = "";
-    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
-        result += buffer;
-    }
-    int status = pclose(pipe);
-    if (status != 0) {
-        std::cerr << "Executable returned an error." << std::endl;
-        return {};
-    }
+std::vector<double> parse_complex(std::string input) {
     double a, b;
-    if (sscanf(result.c_str(), "%lf,%lf", &a, &b) == 2) {
-        return {a, b};
+    // Remove spaces from the input
+    input.erase(std::remove(input.begin(), input.end(), ' '), input.end());
+
+    // Find the position of the '+' or '-' sign for the imaginary part
+    size_t plusPos = input.find('+');
+    size_t minusPos = input.find('-');
+
+    // Determine the position of the imaginary part
+    size_t signPos = (plusPos != std::string::npos) ? plusPos : minusPos;
+
+    if (signPos != std::string::npos) {
+        // Extract the real part (a)
+        std::string realPart = input.substr(0, signPos);
+        a = std::stod(realPart);
+
+        // Extract the imaginary part (b)
+        std::string imaginaryPart = input.substr(signPos);
+        // Remove the 'i' character
+        imaginaryPart.erase(std::remove(imaginaryPart.begin(), imaginaryPart.end(), 'i'), imaginaryPart.end());
+        b = std::stod(imaginaryPart);
     } else {
-        std::cerr << "Failed to parse output from executable." << std::endl;
-        return {};
+        std::cerr << "Invalid input format." << std::endl;
+        return {-1,-1} ;
     }
+
+    std::vector<double> result;
+    result.push_back(a);
+    result.push_back(b);
+    // std::cout << "Real part (a): " << a << std::endl;
+    // std::cout << "Imaginary part (b): " << b << std::endl;
+
+    return result;
 }
+
 void displayChoices(){
     
     return;
