@@ -5,7 +5,7 @@
 #include "complex_number_arithmetics.h"
 
 inline std::vector<double> parse_complex(const std::string& complex_str) {
-    std::string command = "./complex_parser \"" + complex_str + "\"";
+    std::string command = "complex_parser.exe \"" + complex_str + "\"";
     FILE* pipe = popen(command.c_str(), "r");
     if (!pipe) {
         std::cerr << "Failed to open pipe to executable." << std::endl;
@@ -29,7 +29,10 @@ inline std::vector<double> parse_complex(const std::string& complex_str) {
         return {};
     }
 }
-
+void displayChoices(){
+    
+    return;
+}
 int main() {
     std::vector<double> result_vec;
     std::string number_1, number_2;
