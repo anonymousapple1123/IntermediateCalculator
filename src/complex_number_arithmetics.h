@@ -46,8 +46,8 @@ public:
         std::cerr << "Error: Division by zero is not allowed." << std::endl;
         return result;
     }
-    T real_part = (real_1 * real_2 + imaginary_1 * imaginary_2);
-    T imaginary_part = (imaginary_1 * real_2 - real_1 * imaginary_2);
+    T real_part = (real_1 * real_2 + imaginary_1 * imaginary_2) / denominator;
+    T imaginary_part = (imaginary_1 * real_2 - real_1 * imaginary_2) / denominator;
     result.push_back(real_part);
     result.push_back(imaginary_part);
     return result;

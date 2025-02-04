@@ -62,7 +62,7 @@ int main() {
             std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
             break;
         case 3:
-            result_vec=complex.MultiplyComplexNumber();
+            result_vec=complex.DivideComplexNumber();
             std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
             break;
         default:
