@@ -53,35 +53,18 @@ public:
     result.push_back(imaginary_part);
     return result;
     }
-
-    std::vector<T> PowerOfI(int exponent){
-        std::vector<T> result;
-         if (!std::is_integral<decltype(exponent)>::value) {
-        std::cerr << "Error: Exponent must be an integer." << std::endl;
+    
+    std::vector<std::string> PowerOfI(int n) {
+    std::vector<std::string> result;
+    if (n < 0) {
+        std::cerr << "Error: Power of i cannot be negative." << std::endl;
+        result.push_back("Invalid Input");
         return result;
-        }
-        if (exponent < 0) {
-        std::cerr << "Error: Negative exponents are not supported for PowerOfI." << std::endl;
-        return result;
-        }
-        int cycle = exponent % 4;
-        if (cycle == 0) result.push_back(static_cast<T>(1));
-        else if (cycle == 1) {
-        result.push_back(static_cast<T>(0));
-        result.push_back(static_cast<T>(1));
-        }
-        else if (cycle == 2) result.push_back(static_cast<T>(-1));
-        else {
-        result.push_back(static_cast<T>(0));
-        result.push_back(static_cast<T>(-1));
-        }
-        return result;
-     /*
-        std::is_integral<T> is a C++ type trait that checks if T is an integer type.
-        decltype(exponent) ensures that we check the actual data type of exponent.
-        If exponent is not an integer, std::is_integral returns false.
-     */
     }
+     std::vector<std::string> cycle = {"1", "i", "-1", "-i"};
+    result.push_back(cycle[n % 4]);
+    return result;
+}
     
 std::vector<T>ConjugateComplexNumber() {
     std::vector<T> result;
