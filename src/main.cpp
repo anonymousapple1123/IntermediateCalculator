@@ -31,59 +31,95 @@ std::vector<double> parse_complex(const std::string& complexStr) {
 
 // Function for complex number operations
 void complexOperations() {
+    int choice;
     std::vector<double> result_vec;
     std::string number_1, number_2;
 
-    std::cout << "Enter first complex number (e.g., 3+4i): ";
-    std::getline(std::cin, number_1);
+    std::cout << "Choose operation:\n";
+    std::cout << "1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Modulus\n6. Conjugate\n7. Power of i\nEnter your choice: ";
+    std::cin >> choice;
+    std::cin.ignore(); // To clear the newline character left by std::cin
 
-    std::cout << "Enter second complex number (e.g., 1-2i): ";
-    std::getline(std::cin, number_2);
+    if (choice >= 1 && choice <= 7) {
+        if (choice == 5 || choice == 6) { // Modulus and Conjugate require only one complex number
+            std::cout << "Enter a complex number (e.g., 3+4i): ";
+            std::getline(std::cin, number_1);
+            std::vector<double> parsed_num1 = parse_complex(number_1);
 
-    std::vector<double> parsed_num1 = parse_complex(number_1);
-    std::vector<double> parsed_num2 = parse_complex(number_2);
+            if (parsed_num1.size() == 2) {
+                ComplexNumber<double> complex(parsed_num1[0], parsed_num1[1]);  // Only one complex number
 
-    if ((parsed_num1.size() == 2) && (parsed_num2.size() == 2)) {
-        ComplexNumber<double> complex(parsed_num1[0], parsed_num1[1], parsed_num2[0], parsed_num2[1]);
-        int choice;
-        std::cout << "Choose operation:\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Modulus\n6. Conjugate\nEnter your choice: ";
-        std::cin >> choice;
-        std::cin.ignore(); // To clear the newline character left by std::cin
+                switch (choice) {
+                    case 5:
+                        result_vec = complex.ModulusComplexNumber();
+                        std::cout << "Modulus: " << result_vec[0] << std::endl;
+                        break;
+                    case 6:
+                        result_vec = complex.ConjugateComplexNumber();
+                        std::cout << "Conjugate: " << result_vec[0] << " + " << result_vec[1] << "i\n";
+                        break;
+                    default:
+                        std::cerr << "Invalid choice!" << std::endl;
+                        break;
+                }
+            } else {
+                std::cerr << "Failed to parse complex number." << std::endl;
+            }
+        }
+        else if (choice == 7) { // Power of i requires only an integer
+            int power;
+            std::cout << "Enter the power of i (e.g., 1, 2, 3, etc.): ";
+            std::cin >> power;
+            std::cin.ignore();  // To clear any remaining newline characters
 
-        switch (choice) {
-            case 1:
-                result_vec = complex.AddComplexNumber();
-                std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
-                break;
-            case 2:
-                result_vec = complex.SubtractComplexNumber();
-                std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
-                break;
-            case 3:
-                result_vec = complex.MultiplyComplexNumber();
-                std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
-                break;
-            case 4:
-                result_vec = complex.DivideComplexNumber();
-                std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
-                break;
-            case 5:
-                result_vec = complex.ModulusComplexNumber();
-                std::cout << "Modulus of first: " << result_vec[0] << ", Modulus of second: " << result_vec[1] << std::endl;
-                break;
-            case 6:
-                result_vec = complex.ConjugateComplexNumber();
-                std::cout << "Conjugate of first: " << result_vec[0] << " + " << result_vec[1] << "i\n";
-                std::cout << "Conjugate of second: " << result_vec[2] << " + " << result_vec[3] << "i\n";
-                break;
-            default:
-                std::cerr << "Invalid choice!" << std::endl;
-                break;
+            ComplexNumber<double> complex(0, 0); // Using a default complex number for this case
+            std::vector<std::string> power_result = complex.PowerOfI(power);
+
+            std::cout << "i^" << power << " = " << power_result[0] << std::endl;
+        }
+        else {  // For other operations (Add, Subtract, Multiply, Divide), two complex numbers are needed
+            std::cout << "Enter first complex number (e.g., 3+4i): ";
+            std::getline(std::cin, number_1);
+
+            std::cout << "Enter second complex number (e.g., 1-2i): ";
+            std::getline(std::cin, number_2);
+
+            std::vector<double> parsed_num1 = parse_complex(number_1);
+            std::vector<double> parsed_num2 = parse_complex(number_2);
+
+            if ((parsed_num1.size() == 2) && (parsed_num2.size() == 2)) {
+                ComplexNumber<double> complex(parsed_num1[0], parsed_num1[1], parsed_num2[0], parsed_num2[1]);
+
+                switch (choice) {
+                    case 1:
+                        result_vec = complex.AddComplexNumber();
+                        std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
+                        break;
+                    case 2:
+                        result_vec = complex.SubtractComplexNumber();
+                        std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
+                        break;
+                    case 3:
+                        result_vec = complex.MultiplyComplexNumber();
+                        std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
+                        break;
+                    case 4:
+                        result_vec = complex.DivideComplexNumber();
+                        std::cout << "= " << result_vec[0] << " + " << result_vec[1] << "i" << std::endl;
+                        break;
+                    default:
+                        std::cerr << "Invalid choice!" << std::endl;
+                        break;
+                }
+            } else {
+                std::cerr << "Failed to parse complex numbers." << std::endl;
+            }
         }
     } else {
-        std::cerr << "Failed to parse complex numbers." << std::endl;
+        std::cerr << "Invalid operation choice!" << std::endl;
     }
 }
+
 
 // Function for matrix operations
 void matrixOperations() {
