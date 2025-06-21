@@ -1,5 +1,4 @@
-#ifndef COMPLEXNUMBER_H
-#define COMPLEXNUMBER_H
+#pragma once
 
 #include <iostream>
 #include <type_traits>
@@ -82,5 +81,3 @@ std::vector<T>ModulusComplexNumber() {
     return result;
 }
 };
-
-#endif // COMPLEXNUMBER_H

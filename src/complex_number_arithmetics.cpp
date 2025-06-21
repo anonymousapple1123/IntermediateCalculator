@@ -1,5 +1,4 @@
-#include "complex_number_arithmetics.h"
-#include <vector>
+#include "complex_arith.hpp"
 
 template<typename T>
 ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
@@ -80,10 +79,3 @@ ModulusComplexNumber() {
     result.push_back(std::sqrt(real_2 * real_2 + imaginary_2 * imaginary_2));
     return result;
 }
-
-
-
-
-// Explicit instantiation for required types
-template class ComplexNumber<double>;
-template class ComplexNumber<float>;

@@ -1,10 +1,9 @@
 #include <iostream>
-#include <sstream>
 #include <algorithm>
 #include <cstdio>
 #include <string>
 #include <vector>
-#include "complex_number_arithmetics.h"
+#include "complex_arith.hpp"
 
 std::vector<double> parse_complex(std::string input) {
     double a, b;
