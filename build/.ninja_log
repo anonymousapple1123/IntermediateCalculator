@@ -1,5 +1,7 @@
 # ninja log v6
-3	319	1750499045325488762	CMakeFiles/main.dir/src/matrices_operation.cpp.o	a28c53b18808411b
-2	376	1750499395212753897	CMakeFiles/main.dir/src/main.cpp.o	4bd0fbbc8d9c0701
+372	420	1750502191188568180	/home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main	908a60f3f4a948bf
 3	283	1750499637847944797	CMakeFiles/main.dir/src/matrices_operation.cpp.o	a28c53b18808411b
-3	396	1750499637847944797	CMakeFiles/main.dir/src/main.cpp.o	4bd0fbbc8d9c0701
+2	372	1750502190818544139	CMakeFiles/main.dir/src/main.cpp.o	4bd0fbbc8d9c0701
+2	221	1750502324744323138	CMakeFiles/main.dir/src/matrices_operation.cpp.o	a28c53b18808411b
+2	362	1750502324744323138	CMakeFiles/main.dir/src/main.cpp.o	4bd0fbbc8d9c0701
+362	409	1750502325104346886	/home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main	941b88defc6c672d
