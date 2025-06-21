@@ -1,0 +1,3 @@
+/home/fyodor/VScode/GitProject/IntermediateCalculator/build/CMakeFiles/main.dir
+/home/fyodor/VScode/GitProject/IntermediateCalculator/build/CMakeFiles/edit_cache.dir
+/home/fyodor/VScode/GitProject/IntermediateCalculator/build/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,5 @@
 #include "complex_number_arithmetics.h"
+#include <vector>
 
 template<typename T>
 ComplexNumber<T, typename std::enable_if<std::is_floating_point<T>::value && std::is_signed<T>::value>::type>::
