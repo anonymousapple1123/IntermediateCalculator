@@ -1,0 +1,4 @@
+To build in the root folder :
+
+    cmake -S . -B build -G Ninja
+    cmake --build build

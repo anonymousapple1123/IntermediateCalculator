@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "complex_arith.hpp"
+#include "matrices_operation.hpp"
 
 std::vector<double> parse_complex(std::string input) {
     double a, b;
@@ -39,6 +40,11 @@ void displayChoices(){
     return;
 }
 int main() {
+    std::vector<std::vector<float>> matrix= {{1.0,4.0},
+                                            {5.0,0.0}};
+    MatrixOperation<float> mat(matrix);
+    mat.PrintMatrix();
+
     std::vector<double> result_vec;
     std::string number_1, number_2;
 
