@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: test
-# Configurations: 
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,23 +49,26 @@ cmake_ninja_workdir = /Users/ayushkumar/Code/IntermediateCalculator/build/
 
 build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/main.dir/src/Vector_algebra.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/Vector_algebra.cpp || cmake_object_order_depends_target_main
+build CMakeFiles/main.dir/src/Vector_algebra.cpp.o: CXX_COMPILER__main_unscanned_Debug /Users/ayushkumar/Code/IntermediateCalculator/src/Vector_algebra.cpp || cmake_object_order_depends_target_main
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/main.dir/src/Vector_algebra.cpp.o.d
-  FLAGS = -std=gnu++17 -arch arm64
+  FLAGS = -g -std=gnu++17 -arch arm64
   INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
-build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/main.cpp || cmake_object_order_depends_target_main
+build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_unscanned_Debug /Users/ayushkumar/Code/IntermediateCalculator/src/main.cpp || cmake_object_order_depends_target_main
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
-  FLAGS = -std=gnu++17 -arch arm64
+  FLAGS = -g -std=gnu++17 -arch arm64
   INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
-build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/matrices_operation.cpp || cmake_object_order_depends_target_main
+build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unscanned_Debug /Users/ayushkumar/Code/IntermediateCalculator/src/matrices_operation.cpp || cmake_object_order_depends_target_main
+  CONFIG = Debug
   DEP_FILE = CMakeFiles/main.dir/src/matrices_operation.cpp.o.d
-  FLAGS = -std=gnu++17 -arch arm64
+  FLAGS = -g -std=gnu++17 -arch arm64
   INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
@@ -73,8 +81,9 @@ build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unsca
 #############################################
 # Link the executable /Users/ayushkumar/Code/IntermediateCalculator/bin/main
 
-build /Users/ayushkumar/Code/IntermediateCalculator/bin/main: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/src/Vector_algebra.cpp.o CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/matrices_operation.cpp.o
-  FLAGS = -arch arm64
+build /Users/ayushkumar/Code/IntermediateCalculator/bin/main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/Vector_algebra.cpp.o CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/matrices_operation.cpp.o
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :

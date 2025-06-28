@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/ayushkumar/Code/IntermediateCalculator/build",
+  "command": "/usr/bin/clang++ -I/Users/ayushkumar/Code/IntermediateCalculator/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/Vector_algebra.cpp.o -c /Users/ayushkumar/Code/IntermediateCalculator/src/Vector_algebra.cpp",
+  "file": "/Users/ayushkumar/Code/IntermediateCalculator/src/Vector_algebra.cpp",
+  "output": "CMakeFiles/main.dir/src/Vector_algebra.cpp.o"
+},
+{
+  "directory": "/Users/ayushkumar/Code/IntermediateCalculator/build",
+  "command": "/usr/bin/clang++ -I/Users/ayushkumar/Code/IntermediateCalculator/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/main.cpp.o -c /Users/ayushkumar/Code/IntermediateCalculator/src/main.cpp",
+  "file": "/Users/ayushkumar/Code/IntermediateCalculator/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/ayushkumar/Code/IntermediateCalculator/build",
+  "command": "/usr/bin/clang++ -I/Users/ayushkumar/Code/IntermediateCalculator/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/main.dir/src/matrices_operation.cpp.o -c /Users/ayushkumar/Code/IntermediateCalculator/src/matrices_operation.cpp",
+  "file": "/Users/ayushkumar/Code/IntermediateCalculator/src/matrices_operation.cpp",
+  "output": "CMakeFiles/main.dir/src/matrices_operation.cpp.o"
+}
+]
