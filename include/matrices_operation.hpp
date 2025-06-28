@@ -4,6 +4,7 @@
 #include <type_traits>
 #include <vector>
 #include <cmath>
+#include <stdexcept> // Required for std::runtime_error
 
 template<typename T>
 class MatrixOperation {

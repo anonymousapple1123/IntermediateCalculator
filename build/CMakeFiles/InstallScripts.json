@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/fyodor/VScode/GitProject/IntermediateCalculator/build/cmake_install.cmake"
+		"/Users/ayushkumar/Code/IntermediateCalculator/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

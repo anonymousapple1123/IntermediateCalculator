@@ -1,5 +1,9 @@
-# ninja log v6
-362	409	1750502325104346886	/home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main	941b88defc6c672d
-4	583	1750612418373047891	CMakeFiles/main.dir/src/matrices_operation.cpp.o	a28c53b18808411b
-3	883	1750612418372047871	CMakeFiles/main.dir/src/main.cpp.o	4bd0fbbc8d9c0701
-3	583	1750612591961472672	CMakeFiles/main.dir/src/matrices_operation.cpp.o	a28c53b18808411b
+# ninja log v7
+1	359	1751030161394752733	CMakeFiles/main.dir/src/Vector_algebra.cpp.o	a0685ba2c23a4ab2
+4	294	1751092710510681248	CMakeFiles/main.dir/src/main.cpp.o	4cf1589126348b19
+4	276	1751092880052578870	CMakeFiles/main.dir/src/matrices_operation.cpp.o	6c99789ab4188471
+276	382	1751092880325078285	/Users/ayushkumar/Code/IntermediateCalculator/bin/main	6cb63528da89fba1
+5	302	1751093249480004402	CMakeFiles/main.dir/src/main.cpp.o	4cf1589126348b19
+6	326	1751093249480155278	CMakeFiles/main.dir/src/matrices_operation.cpp.o	6c99789ab4188471
+4	250	1751093286796836110	CMakeFiles/main.dir/src/Vector_algebra.cpp.o	a0685ba2c23a4ab2
+250	289	1751093287043297963	/Users/ayushkumar/Code/IntermediateCalculator/bin/main	6cb63528da89fba1

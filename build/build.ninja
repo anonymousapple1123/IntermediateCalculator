@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/fyodor/VScode/GitProject/IntermediateCalculator/build/
+cmake_ninja_workdir = /Users/ayushkumar/Code/IntermediateCalculator/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target main
 
@@ -44,17 +44,24 @@ cmake_ninja_workdir = /home/fyodor/VScode/GitProject/IntermediateCalculator/buil
 
 build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_unscanned_ /home/fyodor/VScode/GitProject/IntermediateCalculator/src/main.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
-  FLAGS = -std=gnu++17
-  INCLUDES = -I/home/fyodor/VScode/GitProject/IntermediateCalculator/include
+build CMakeFiles/main.dir/src/Vector_algebra.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/Vector_algebra.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/src/Vector_algebra.cpp.o.d
+  FLAGS = -std=gnu++17 -arch arm64
+  INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
-build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unscanned_ /home/fyodor/VScode/GitProject/IntermediateCalculator/src/matrices_operation.cpp || cmake_object_order_depends_target_main
+build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
+  FLAGS = -std=gnu++17 -arch arm64
+  INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/src
+
+build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unscanned_ /Users/ayushkumar/Code/IntermediateCalculator/src/matrices_operation.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles/main.dir/src/matrices_operation.cpp.o.d
-  FLAGS = -std=gnu++17
-  INCLUDES = -I/home/fyodor/VScode/GitProject/IntermediateCalculator/include
+  FLAGS = -std=gnu++17 -arch arm64
+  INCLUDES = -I/Users/ayushkumar/Code/IntermediateCalculator/include
   OBJECT_DIR = CMakeFiles/main.dir
   OBJECT_FILE_DIR = CMakeFiles/main.dir/src
 
@@ -64,15 +71,14 @@ build CMakeFiles/main.dir/src/matrices_operation.cpp.o: CXX_COMPILER__main_unsca
 
 
 #############################################
-# Link the executable /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
+# Link the executable /Users/ayushkumar/Code/IntermediateCalculator/bin/main
 
-build /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/matrices_operation.cpp.o
-  DEP_FILE = CMakeFiles/main.dir/link.d
-  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/main.dir/link.d
+build /Users/ayushkumar/Code/IntermediateCalculator/bin/main: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/src/Vector_algebra.cpp.o CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/matrices_operation.cpp.o
+  FLAGS = -arch arm64
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
+  TARGET_FILE = /Users/ayushkumar/Code/IntermediateCalculator/bin/main
   TARGET_PDB = main.dbg
 
 
@@ -80,7 +86,7 @@ build /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main: CXX_EXECUT
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/fyodor/VScode/GitProject/IntermediateCalculator/build && /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/bin/ccmake -S/home/fyodor/VScode/GitProject/IntermediateCalculator -B/home/fyodor/VScode/GitProject/IntermediateCalculator/build
+  COMMAND = cd /Users/ayushkumar/Code/IntermediateCalculator/build && /opt/homebrew/bin/ccmake -S/Users/ayushkumar/Code/IntermediateCalculator -B/Users/ayushkumar/Code/IntermediateCalculator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -92,7 +98,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/fyodor/VScode/GitProject/IntermediateCalculator/build && /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/bin/cmake --regenerate-during-build -S/home/fyodor/VScode/GitProject/IntermediateCalculator -B/home/fyodor/VScode/GitProject/IntermediateCalculator/build
+  COMMAND = cd /Users/ayushkumar/Code/IntermediateCalculator/build && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/ayushkumar/Code/IntermediateCalculator -B/Users/ayushkumar/Code/IntermediateCalculator/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -102,7 +108,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build main: phony /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
+build main: phony /Users/ayushkumar/Code/IntermediateCalculator/bin/main
 
 # =============================================================================
 # Folder targets.
@@ -110,9 +116,9 @@ build main: phony /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
 # =============================================================================
 
 #############################################
-# Folder: /home/fyodor/VScode/GitProject/IntermediateCalculator/build
+# Folder: /Users/ayushkumar/Code/IntermediateCalculator/build
 
-build all: phony /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
+build all: phony /Users/ayushkumar/Code/IntermediateCalculator/bin/main
 
 # =============================================================================
 # Built-in targets
@@ -121,14 +127,14 @@ build all: phony /home/fyodor/VScode/GitProject/IntermediateCalculator/bin/main
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /home/fyodor/VScode/GitProject/IntermediateCalculator/build/cmake_install.cmake: RERUN_CMAKE | /home/fyodor/VScode/GitProject/IntermediateCalculator/CMakeLists.txt /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
+build build.ninja /Users/ayushkumar/Code/IntermediateCalculator/build/cmake_install.cmake: RERUN_CMAKE | /Users/ayushkumar/Code/IntermediateCalculator/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/fyodor/VScode/GitProject/IntermediateCalculator/CMakeLists.txt /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Compiler/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Linker/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/Linux.cmake /opt/cmake-4.0.2/cmake-4.0.2-linux-x86_64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
+build /Users/ayushkumar/Code/IntermediateCalculator/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.3/CMakeCCompiler.cmake CMakeFiles/4.0.3/CMakeCXXCompiler.cmake CMakeFiles/4.0.3/CMakeSystem.cmake: phony
 
 
 #############################################
